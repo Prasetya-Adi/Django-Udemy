@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-</head>
+{% block title %} {{Judul}} {% endblock %}
 
-<body>
-    <a href={% url 'HomeTemplate' %}>Home</a>
-    <h1>{{title}}</h1>
+{% block titleContent %} {{Judul}} {% endblock %}
+
+{% block content %}
+
+    {% if ContenOftitle != None %}
     <p>{{ContenOftitle}}</p>
-</body>
+    {% else %}
+    <p>There is no content.</p>
+    {% endif %}
 
-</html>
+{% endblock %}
+
