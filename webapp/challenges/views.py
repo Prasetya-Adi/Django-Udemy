@@ -53,4 +53,4 @@ def Random5(request, bulan):
     return HttpResponseRedirect(reverse('bulanreverse', args=[redirectbulan]))
 
 
-# mencoba gith
+# mencoba gith2
