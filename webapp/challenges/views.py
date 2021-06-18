@@ -51,3 +51,6 @@ def Random5(request, bulan):
     bulankeys = list(Bulan.keys())
     redirectbulan = bulankeys[bulan-1]
     return HttpResponseRedirect(reverse('bulanreverse', args=[redirectbulan]))
+
+
+# mencoba gith
