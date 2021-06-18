@@ -1,10 +1,11 @@
-from django.urls import path
 from django.urls import path, re_path
 
 from . import views
 
 urlpatterns = [
-    re_path(r'^(?P<bulan>[\w-]+)/$', views.Random),
-    path('v2/<bulan2>', views.Random2),
-    path('v2/<int:bulan2>', views.Random3),
+    re_path(r'^(?P<bulan>[\w-]+)/$', views.Random1, name='bulanreverse'),
+    path('v2/<bulan>', views.Random2),
+    path('v3/<bulan>', views.Random3),
+    path('v4/<int:bulan>', views.Random4),
+    path('v5/<int:bulan>', views.Random5),
 ]
