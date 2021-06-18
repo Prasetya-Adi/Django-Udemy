@@ -18,10 +18,8 @@ def index(request):
     list_bulan = ""
     nama_bulan = list(Bulan.keys())
     for bulan in nama_bulan:
-
         urlBulan = reverse('bulanreverse', args=[bulan])
         list_bulan += f'<li><a href=\"{urlBulan}\">{bulan}</a></li>'
-
     responeData = f"<ul>{list_bulan}</ul>"
     return HttpResponse(responeData)
 

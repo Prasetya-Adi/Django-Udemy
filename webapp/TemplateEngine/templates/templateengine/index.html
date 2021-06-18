@@ -5,35 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Engine</title>
+    <title>Index Template Engine</title>
 </head>
 
 <body>
-    <h1>
-        Template Engine
-    </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, sed culpa saepe soluta impedit alias, placeat
-        nemo temporibus maxime cupiditate dolorem veritatis minus hic est? Illo deserunt, tempore facilis culpa earum
-        laborum? Vel vitae velit, debitis enim quasi excepturi iure id dolores. Culpa facilis voluptatem saepe odio
-        veritatis labore earum? In eum necessitatibus officiis reprehenderit dignissimos accusamus quibusdam tempore
-        illum perferendis sit, dolorem iusto cum magni maiores eveniet rem nobis eligendi tempora minus beatae. Numquam
-        fuga saepe id possimus eaque quae aperiam fugit esse doloribus, non asperiores nisi nostrum, reiciendis iste rem
-        commodi! Libero tempore, similique quis dicta possimus nisi!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, debitis? Ex sint dolor nam ullam ab et
-        pariatur? Minima reprehenderit temporibus, amet illum, excepturi saepe cumque obcaecati iste ad, assumenda dolor
-        sapiente modi exercitationem quis quidem maiores laborum ex nobis blanditiis! Labore qui debitis quos totam ut,
-        itaque aperiam sunt. Quam reiciendis iste in ut, nemo suscipit doloribus repellendus omnis temporibus nesciunt.
-        Illo eos quibusdam quam adipisci, ullam dicta tenetur ab enim ipsum quas ipsa nemo sint quidem, soluta officiis
-        accusantium consectetur explicabo odit dolorem repudiandae dolorum impedit incidunt. Odio, nemo sint!
-        Laudantium, rem totam pariatur, iusto sed tenetur veritatis optio quisquam accusamus nulla rerum sequi obcaecati
-        cumque perspiciatis dolorem architecto. Labore voluptatem dolore, molestias quaerat assumenda enim debitis dolor
-        culpa vitae numquam doloribus id aliquam quasi inventore in voluptatibus repudiandae? Doloribus molestias
-        doloremque animi, laborum aspernatur iste saepe! Optio sint sequi officiis iure placeat explicabo ex at sit a?
-        Magnam veritatis tenetur molestias officiis magni, asperiores repellendus facere quos eligendi delectus nihil
-        corporis inventore. Voluptas laudantium debitis id. Culpa facere nemo necessitatibus repellendus, doloribus
-        dicta inventore repellat hic vel quos cum voluptas. Voluptas a culpa assumenda quae mollitia harum enim omnis
-        sed, modi perspiciatis exercitationem impedit error quia necessitatibus!
+    <h1>List Template Engine</h1>
+    {% for key in isi %}
+    <p>
+        <a href={% url 'templateengine' key %} style="text-decoration: none; color: blue;">{{ key }}</a>
     </p>
+    {% endfor %}
 </body>
 
 </html>
