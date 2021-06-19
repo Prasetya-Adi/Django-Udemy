@@ -1,34 +1,42 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<title>{% block title %} {% endblock %}</title>
-</head>
-<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Template Engine</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'HomeTemplate' %}">Home</a>
-        </li>
-      </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+  {% include "snippets/navbar.html" %}
+
+  <div class="container">
+
+    <div class="jumbotron mt-5">
+      <h1 class="display-4">Hello!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     </div>
+
+    <ul class="list-group mt-5">
+      <li class="list-group-item">
+        <h1>{% block titleContent %}{% endblock %}</h1>
+      </li>
+      <li class="list-group-item">{% block content %}{% endblock %}</li>
+    </ul>
   </div>
-</nav>
-<div class="container">
-<ul class="list-group">
-  <li class="list-group-item"><h1>{% block titleContent %}{% endblock %}</h1></li>
-  <li class="list-group-item">{% block content %}{% endblock %}</li>
-</ul>
-</div>
 </body>
+
 </html>
