@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'TemplateEngine',
     'challenges',
     'blog',
-    'data_model'
+    'data_model',
 ]
 
 MIDDLEWARE = [
