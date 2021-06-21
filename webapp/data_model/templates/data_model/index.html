@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'data_model/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data and Model</title>
-</head>
+{% block title %} ALL BOOKS {% endblock title %}
 
-<body>
-    <h1>Data and Model</h1>
-</body>
+{% block Header %} ALL BOOKS {% endblock Header %}
 
-</html>
+{% block content %}
+
+<div class="card mt-10" style="width: 50rem;">
+    <h3>Total Buku: {{num_books}}</h3>
+    <h3>Average Rating : {{avg_rating.rating__avg}}</h3>
+    {% for book in all_book %}
+    <ul class="list-group list-group-flush">
+        <a href={% url 'DataBooks' book.slug %} class="text-decoration-none">
+            <li class="list-group-item">{{ book.title }}, Rating : {{ book.rating }}</li>
+        </a>
+    </ul>
+    {% endfor %}
+
+</div>
+
+{% endblock content %}
