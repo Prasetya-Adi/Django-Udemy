@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'challenges',
     'blog',
     'data_model',
+    'Relationships',
 ]
 
 MIDDLEWARE = [

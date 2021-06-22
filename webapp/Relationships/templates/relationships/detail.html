@@ -1,0 +1,25 @@
+ {% extends "base.html" %}
+
+ {% block title %} Relationships {% endblock %}
+
+ {% block titleContent %} Relationships {% endblock %}
+
+ {% block content %}
+ <div class="card mt-10" style="width: 50rem;">
+     <ul class="list-group list-group-flush">
+         <li class="list-group-item">
+             <p>Judul Buku : {{ a_book.title }}</p>
+             <p>Rating : {{ a_book.rating }}</p>
+             <p>Author : {{ a_book.author }}</p>
+             <p>Best Selling :
+                 {% if a_book.is_bestselling %}
+                 It's a BestSelling!
+                 {% else %}
+                 It's not a BestSelling.
+                 {% endif %}
+             </p>
+         </li>
+     </ul>
+
+ </div>
+ {% endblock %}

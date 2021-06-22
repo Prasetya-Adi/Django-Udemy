@@ -1,0 +1,20 @@
+ {% extends "base.html" %}
+
+ {% block title %} Relationships {% endblock %}
+
+ {% block titleContent %} Relationships {% endblock %}
+
+ {% block content %}
+ <div class="card mt-10" style="width: 50rem;">
+     <h3>Total Buku: {{num_books}}</h3>
+     <h3>Average Rating : {{avg_rating.rating__avg}}</h3>
+     {% for book in all_book %}
+     <ul class="list-group list-group-flush">
+         <a href={% url 'DetailRelationships' book.slug %} class="text-decoration-none">
+             <li class="list-group-item">{{ book.title }}, Rating : {{ book.rating }}</li>
+         </a>
+     </ul>
+     {% endfor %}
+
+ </div>
+ {% endblock %}
