@@ -18,6 +18,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path('secondblog/', include('secondblog.urls')),
     path('relationships/', include('Relationships.urls')),
     path('data/', include('data_model.urls')),
     path('blog/', include('blog.urls')),

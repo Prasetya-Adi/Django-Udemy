@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'data_model',
     'Relationships',
+    'secondblog'
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,10 @@ ROOT_URLCONF = 'webapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', BASE_DIR / 'data_model/templates/data_model'],
+        'DIRS': ['templates',
+                 BASE_DIR / 'data_model/templates/data_model',
+                 BASE_DIR / 'secondblog/template/secondblog'
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
