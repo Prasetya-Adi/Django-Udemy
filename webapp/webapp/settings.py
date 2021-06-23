@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'blog',
     'data_model',
     'Relationships',
-    'secondblog'
+    'secondblog',
+    'reviews',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['templates',
                  BASE_DIR / 'data_model/templates/data_model',
-                 BASE_DIR / 'secondblog/template/secondblog'
+                 BASE_DIR / 'secondblog/template/secondblog',
+                 BASE_DIR / 'reviews/template/reviews',
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
