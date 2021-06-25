@@ -3,31 +3,25 @@
 {% block Title %} {{title}} {% endblock Title %}
 
 {% block Content %}
+
 <div class="top-wrapper">
     <div class="wrapper">
         <div>
             <form method="POST" class="form-control">
                 {% csrf_token %}
-                <div class="form-group mb-3 mt-3 {% if form.user_name.errors %} error {% endif %} ">
-                    {{form.user_name.label_tag }}
-                    {{form.user_name }}
-                    {{form.user_name.errors }}
+                {% for field in form %}
+                <div class="form-group mb-3 mt-3 {% if form.field.errors %} error {% endif %} ">
+                    {{field.label_tag }}
+                    {{field }}
+                    {{field.errors }}
                 </div>
-                <div class="form-group mb-3 mt-3 {% if form.review_text.errors %} error {% endif %} ">
-                    {{form.review_text.label_tag }}
-                    {{form.review_text }}
-                    {{form.review_text.errors }}
-                </div>
-                <div class="form-group mb-3 mt-3 {% if form.rating.errors %} error {% endif %} ">
-                    {{form.rating.label_tag }}
-                    {{form.rating }}
-                    {{form.rating.errors }}
-                </div>
+                {% endfor %}
+
                 <div class="form-group mb-4">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
     </div>
-
-    {% endblock Content %}
+</div>
+{% endblock Content %}
