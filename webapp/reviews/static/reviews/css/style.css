@@ -1,8 +1,11 @@
 .top-wrapper {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 500px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 50px;
+    margin-left: 10px;
 }
 
 .wrapper {}
