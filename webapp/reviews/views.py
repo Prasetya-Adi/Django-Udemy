@@ -7,5 +7,6 @@ from django.shortcuts import render
 def index(request):
     contex = {
         'title': 'Reviews'
+        'content': 'content'
     }
     return render(request, 'reviews/index.html', contex)
