@@ -6,6 +6,8 @@ from .forms import ReviewForms
 
 # Create your views here.
 
+# test ClassView
+
 
 def index(request):
     if request.method == "POST":
