@@ -18,6 +18,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path('uploadfile/', include('uploadfile.urls')),
     path('reviews/', include('reviews.urls')),
     path('secondblog/', include('secondblog.urls')),
     path('relationships/', include('Relationships.urls')),

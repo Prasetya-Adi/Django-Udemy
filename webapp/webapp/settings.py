@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Relationships',
     'secondblog',
     'reviews',
+    'uploadfile',
 ]
 
 MIDDLEWARE = [
