@@ -1,0 +1,15 @@
+{% extends 'reviews/base.html' %}
+
+{% block Title %} All Reviews {% endblock Title %}
+
+{% block Content %}
+<ul style='list-style: none'>
+    {% for key in reviews %}
+    <a href={% url 'one_Reviews' key.id%}>
+        <li>
+            {{key.user_name}}, Rating : {{key.rating}}
+        </li>
+    </a>
+    {% endfor %}
+</ul>
+{% endblock Content %}
