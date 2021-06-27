@@ -65,7 +65,7 @@ TEMPLATES = [
         'DIRS': ['templates',
                  BASE_DIR / 'data_model/templates/data_model',
                  BASE_DIR / 'secondblog/template/secondblog',
-                 BASE_DIR / 'reviews/template/reviews',
+                 BASE_DIR / 'reviews/templates/reviews',
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -133,9 +133,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
+
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = BASE_DIR / 'uploads'

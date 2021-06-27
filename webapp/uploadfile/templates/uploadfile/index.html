@@ -3,5 +3,9 @@
 {% block Title %} {{title}} {% endblock Title %}
 
 {% block content %}
-<h1>Upload Your File here:</h1>
+<form action="{% url 'HomeUploadFile' %}" method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{form}}
+    <button>Upload!</button>
+</form>
 {% endblock content %}
