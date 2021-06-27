@@ -1,0 +1,13 @@
+{% extends 'uploadfile/base.html' %}
+
+{% block Title %} {{title}} {% endblock Title %}
+
+{% block content %}
+<ul>
+    {% for image in images %}
+    <li>
+        <img src="{{ image.data.url }}" alt="">
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

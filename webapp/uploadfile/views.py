@@ -1,9 +1,11 @@
+from typing import List
 from django import forms, urls
 from django.db import models
 from django.db.models.base import Model
 from django.shortcuts import render
 from django.views import View
 from django.views.generic.edit import CreateView
+from django.views.generic import ListView
 from django.http import HttpResponseRedirect
 
 from .forms import UploadForms
@@ -18,6 +20,12 @@ class UploadFileView(CreateView):
     # form_class = UploadForms
     fields = '__all__'
     success_url = '/uploadfile'
+
+
+class allimage(ListView):
+    template_name = 'uploadfile/allimage.html'
+    model = UploadModel
+    context_object_name = 'images'
 
 
 # class UploadFileView(View):

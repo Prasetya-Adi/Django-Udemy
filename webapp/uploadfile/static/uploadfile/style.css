@@ -27,3 +27,11 @@ button:active {
     background-color: #830443;
     border-color: #830443;
 }
+
+img {
+    width: 250px;
+}
+
+ul {
+    display: flex;
+}
